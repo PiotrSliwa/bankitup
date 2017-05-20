@@ -40,7 +40,12 @@
     <div id="wrapper">
         <div id="page-wrapper">
             <div class="row">
-                <div class="col-lg-12"><h1 class="page-header">Rekomendowane inwestycje</h1></div>
+                <div class="col-lg-12">
+                    <h1 class="page-header index-header">
+                        Rekomendowane inwestycje 
+                        <button class="btn btn-primary no-border-radius">Pokaż wszystkie</button>
+                    </h1>
+                </div>
             </div>
             <div class="row">
                 <div class="col-lg-4 mini-offer">
@@ -87,7 +92,12 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-lg-12"><h1 class="page-header">Popularne inwestycje</h1></div>
+                <div class="col-lg-12">
+                    <h1 class="page-header index-header">
+                        Popularne inwestycje
+                        <button class="btn btn-primary no-border-radius">Pokaż wszystkie</button>
+                    </h1>
+                </div>
             </div>
             <div class="row">
                 <div class="col-lg-4 mini-offer">
@@ -134,7 +144,7 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-lg-12"><h1 class="page-header">W twojej okolicy</h1></div>
+                <div class="col-lg-12"><h1 class="page-header index-header">W twojej okolicy</h1></div>
             </div>
             <div class="row">
                 <div class="col-lg-8">
@@ -146,8 +156,25 @@
                             zoom: 15,
                             center: pos
                         });
-                        var marker = new google.maps.Marker({
+                        new google.maps.Marker({
                             position: pos,
+                            map: map,
+                            icon: '../img/selected_marker.png'
+                        });
+                        new google.maps.Marker({
+                            position: {lat: 51.1164282, lng: 17.0627953},
+                            map: map
+                        });
+                        new google.maps.Marker({
+                            position: {lat: 51.1164282, lng: 17.0637953},
+                            map: map
+                        });
+                        new google.maps.Marker({
+                            position: {lat: 51.1185582, lng: 17.0617953},
+                            map: map
+                        });
+                        new google.maps.Marker({
+                            position: {lat: 51.1135582, lng: 17.0617953},
                             map: map
                         });
                       }
