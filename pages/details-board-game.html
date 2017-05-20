@@ -75,7 +75,7 @@
                     </div>
                     <div class="row invest-box">
                         <div class="col-lg-12 no-padding text-center">
-                            <button type="button" style="height:124px" class="btn btn-primary btn-lg btn-block no-border-radius">Zainwestuj</button>
+                            <button type="button" style="height:124px" class="btn btn-primary btn-lg btn-block no-border-radius" data-toggle="modal" data-target="#myModal">Zainwestuj</button>
                         </div>
                     </div>
                     
@@ -83,7 +83,7 @@
             </div>
             <div class="row">
                 <div class="col-lg-4">
-                    <div class="panel panel-default">
+                    <div class="panel panel-default no-border-radius">
                         <div class="panel-body">
                             <ul class="chat">
                                 <li class="left clearfix">
@@ -158,6 +158,41 @@
             </div>
         </div>
         <!-- /#page-wrapper -->
+        
+        <!-- Modal -->
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+          <div class="modal-dialog modal-sm" role="document">
+            <div class="modal-content no-border-radius">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel"><i class="fa fa-plus fa-fw"></i> Nowa inwestycja</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group investment-amount">
+                        <label for="exampleInputAmount">Kwota inwestycji</label>
+                        <div class="input-group">
+                            <div class="input-group-addon no-border-radius">zł</div>
+                            <input type="text" class="form-control text-center" id="exampleInputAmount" placeholder="Kwota" value="200">
+                            <div class="input-group-addon no-border-radius">.00</div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <!--<div class="col-lg-8"></div>-->
+                        <div class="col-lg-12">
+                            <div class="panel panel-success no-border-radius">
+                                <div class="panel-heading">Oczekiwany zysk</div>
+                                <div class="panel-body text-center expected-income">13 zł/rok</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-default no-border-radius" data-dismiss="modal">Anuluj</button>
+                  <button type="button" class="btn btn-primary no-border-radius">Zainwestuj</button>
+                </div>
+            </div>
+          </div>
+        </div>
 
     </div>
     <!-- /#wrapper -->
