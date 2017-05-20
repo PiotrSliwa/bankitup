@@ -471,4 +471,7 @@ table.dataTable thead .sorting:after {
   height: 400px;
   width: 100%;
 }
+.mini-offer .title {
+  margin-top: 0;
+}
 /*# sourceMappingURL=sb-admin-2.css.map */
