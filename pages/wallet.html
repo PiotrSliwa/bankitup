@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>MicroInvestment Panel</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- MetisMenu CSS -->
+    <link href="../vendor/metisMenu/metisMenu.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="../dist/css/sb-admin-2.css" rel="stylesheet">
+
+    <!-- Morris Charts CSS -->
+    <link href="../vendor/morrisjs/morris.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="../vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+    <style>
+        thead {
+            background-color: #005f27;
+            color: #fff;
+        }
+        
+        th, table, td {
+            border: 0 !important;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div id="wrapper">
+        <div id="page-wrapper">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1 class="page-header profile-name">Twój portfel</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="panel-body">
+                        <div id="wallet-history"></div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="row">
+                        <div class="col-lg-12"><h2>Szczegóły portfela</h2></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <table class="table table-bordered table-hover">
+                                <thead>
+                                    <tr>
+                                        <th>Typ inwestycji</th>
+                                        <th>Nazwa</th>
+                                        <th>Wartość</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><i class="fa fa-money fa-fw"></i> Kredyt</td>
+                                        <td><a href="#">Meble rzeźbione MebelMax</a></td>
+                                        <td>300 zł</td>
+                                    </tr>
+                                    <tr>
+                                        <td><i class="fa fa-money fa-fw"></i> Kredyt</td>
+                                        <td><a href="#">Octal Board Games Pub</a></td>
+                                        <td>200 zł</td>
+                                    </tr>
+                                    <tr>
+                                        <td><i class="fa fa-clock-o fa-fw"></i> Udziały</td>
+                                        <td><a href="#">Xero 3D</a></td>
+                                        <td>1700 zł</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="row">
+                        <div class="col-lg-12"><h2>Historia portfela</h2></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <table class="table table-bordered table-hover">
+                                <thead>
+                                    <tr>
+                                        <th>Data</th>
+                                        <th>Godzina</th>
+                                        <th>Zdarzenie</th>
+                                        <th>Zmiana</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>2017-05-22</td>
+                                        <td>09:59</td>
+                                        <td>Nowa inwestycja - <a href="#">Octal Board Games Pub</a></td>
+                                        <td class="info">200 zł</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2017-05-13</td>
+                                        <td>09:01</td>
+                                        <td>Nowa inwestycja - <a href="#">Xero 3D</a></td>
+                                        <td class="info">1700 zł</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2017-05-10</td>
+                                        <td>19:20</td>
+                                        <td>Wpłata</td>
+                                        <td class="success">+2000 zł</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2017-05-02</td>
+                                        <td>13:47</td>
+                                        <td>Nowa inwestycja - <a href="#">Meble rzeźbione MebelMax</a></td>
+                                        <td class="info">300 zł</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2017-05-02</td>
+                                        <td>12:00</td>
+                                        <td>Wpłata</td>
+                                        <td class="success">+1000 zł</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="row">
+                        <div class="col-lg-12"><h2>Nadchodzące wpływy</h2></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <table class="table table-bordered table-hover">
+                                <thead>
+                                    <tr>
+                                        <th>Data</th>
+                                        <th>Zdarzenie</th>
+                                        <th>Wartość</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>2017-06-02</td>
+                                        <td>Odsetki - <a href="#">Meble rzeźbione MebelMax</a></td>
+                                        <td>1.50 zł</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2017-06-22</td>
+                                        <td>Odsetki - <a href="#">Octal Board Games Pub</a></td>
+                                        <td>1.08 zł</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2017-07-02</td>
+                                        <td>Odsetki - <a href="#">Meble rzeźbione MebelMax</a></td>
+                                        <td>1.38 zł</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2017-07-22</td>
+                                        <td>Odsetki - <a href="#">Octal Board Games Pub</a></td>
+                                        <td>0.99 zł</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2017-08-02</td>
+                                        <td>Odsetki - <a href="#">Meble rzeźbione MebelMax</a></td>
+                                        <td>1.21 zł</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2017-08-13</td>
+                                        <td>Dywidenda - <a href="#">Xero 3D</a></td>
+                                        <td>17 zł</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2017-08-22</td>
+                                        <td>Odsetki - <a href="#">Octal Board Games Pub</a></td>
+                                        <td>0.89 zł</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2017-09-02</td>
+                                        <td>Odsetki - <a href="#">Meble rzeźbione MebelMax</a></td>
+                                        <td>1.12 zł</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2017-09-22</td>
+                                        <td>Odsetki - <a href="#">Octal Board Games Pub</a></td>
+                                        <td>0.77 zł</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!-- /#wrapper -->
+
+    <!-- jQuery -->
+    <script src="../vendor/jquery/jquery.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Metis Menu Plugin JavaScript -->
+    <script src="../vendor/metisMenu/metisMenu.min.js"></script>
+
+    <!-- Morris Charts JavaScript -->
+    <script src="../vendor/raphael/raphael.min.js"></script>
+    <script src="../vendor/morrisjs/morris.min.js"></script>
+    <script>
+        $(function() {
+
+            Morris.Area({
+                element: 'wallet-history',
+                data: [
+                    {
+                        time: '2017-05-01 15:00',
+                        spare: 0,
+                        invested: 0
+                    },
+                    {
+                        time: '2017-05-02 12:00',
+                        spare: 1000,
+                        invested: 0
+                    },
+                    {
+                        time: '2017-05-02 13:47',
+                        spare: 700,
+                        invested: 300
+                    },
+                    {
+                        time: '2017-05-10 19:20',
+                        spare: 2700,
+                        invested: 300
+                    },
+                    {
+                        time: '2017-05-13 09:01',
+                        spare: 1000,
+                        invested: 2000
+                    },
+                    {
+                        time: '2017-05-22 09:59',
+                        spare: 800,
+                        invested: 2200
+                    }
+                ],
+                xkey: 'time',
+                ykeys: ['invested', 'spare'],
+                labels: ['Zainwestowane środki', 'Wolne środki'],
+                pointSize: 2,
+                hideHover: 'auto',
+                resize: true,
+                smooth: false
+            });
+
+        });
+
+    </script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="../dist/js/sb-admin-2.js"></script>
+
+</body>
+
+</html>
