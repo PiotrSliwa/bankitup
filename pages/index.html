@@ -137,19 +137,22 @@
                 <div class="col-lg-12"><h1 class="page-header">W twojej okolicy</h1></div>
             </div>
             <div class="row">
-                <div class="col-lg-4 mini-offer">
-                    <div class="row">
-                        <img src="../img/mini_board_games_profile.jpg" class="col-lg-12">
-                    </div>
-                    <div class="row">
-                        <div class="col-lg-12">
-                            <div class="progress progress-financing">
-                                <div class="progress-bar progress-bar-success" style="width: 43.0%"><div>43.0% finansuje bank</div></div>
-                                <div class="progress-bar progress-bar-primar progress-bar-striped" style="width: 40.7%"><div>40.7%</div></div>
-                            </div>
-                        </div>
-                        <h2 class="col-lg-12 title">Burger Spot</h2>
-                    </div>
+                <div class="col-lg-8">
+                    <div id="map"></div>
+                    <script>
+                      function initMap() {
+                        var pos = {lat: 51.1154282, lng: 17.0617953};
+                        var map = new google.maps.Map(document.getElementById('map'), {
+                            zoom: 15,
+                            center: pos
+                        });
+                        var marker = new google.maps.Marker({
+                            position: pos,
+                            map: map
+                        });
+                      }
+                    </script>
+                    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDcEX7FEj2iqVgdzaXs6DhUXjSs4mVuwAs&callback=initMap"></script>
                 </div>
                 <div class="col-lg-4 mini-offer">
                     <div class="row">
@@ -163,20 +166,6 @@
                             </div>
                         </div>
                         <h2 class="col-lg-12 title">Serwis GSM</h2>
-                    </div>
-                </div>
-                <div class="col-lg-4 mini-offer">
-                    <div class="row">
-                        <img src="../img/mini_board_games_profile.jpg" class="col-lg-12">
-                    </div>
-                    <div class="row">
-                        <div class="col-lg-12">
-                            <div class="progress progress-financing">
-                                <div class="progress-bar progress-bar-success" style="width: 45.0%"><div>45.0% finansuje bank</div></div>
-                                <div class="progress-bar progress-bar-primar progress-bar-striped" style="width: 22.3%"><div>22.3%</div></div>
-                            </div>
-                        </div>
-                        <h2 class="col-lg-12 title">Warsztat Fotograficzny</h2>
                     </div>
                 </div>
             </div>
