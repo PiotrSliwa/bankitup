@@ -1,10 +1,12 @@
 @import "variables.less";
 @import "mixins.less";
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
 
 // Global Styles
 
 body {
     background-color: @gray-lightest;
+    font-family: 'Open Sans', sans-serif;
 }
 
 // Wrappers
@@ -30,6 +32,11 @@ body {
 // Navigation
 
 // --Topbar
+
+.navbar {
+    background-color: #3c763d;
+    border-color: #3c763d;
+}
 
 .navbar-top-links {
     margin-right: 0;
@@ -202,7 +209,7 @@ body {
 }
 
 .chat li.left .chat-body {
-    margin-left: 60px;
+    /*margin-left: 60px;*/
 }
 
 .chat li.right .chat-body {
@@ -544,4 +551,62 @@ table.dataTable thead .sorting:after {
         border-right-width: 14px;
         border-left-width: 0;
     }
+}
+
+//CUSTOM
+
+.no-padding {
+    padding: 0;
+}
+
+.profile-line {
+    margin-bottom: 20px;
+}
+
+.profile-name {
+    font-size: 48px;
+}
+
+.no-border-radius {
+    border-radius: 0;
+}
+
+.progress {
+    .no-border-radius;
+}
+
+.progress-financing {
+    height: 50px;
+}
+
+.progress-bar div {
+    margin-top: 15px;
+    font-size: 18px;
+}
+
+.profile-main-info {
+    & {
+        border-bottom: 1px solid #eee;
+        margin-bottom: 10px;
+    }
+    
+    div {
+        font-size: 24px;
+    }
+}
+
+.invest-box {
+    
+    & {
+        padding-top: 20px;
+    }
+    
+    button {
+        font-size: 36px;
+    }
+}
+
+#map {
+    height: 400px;
+    width: 100%;
 }

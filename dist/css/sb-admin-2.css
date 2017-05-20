@@ -1,5 +1,7 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
 body {
   background-color: #f8f8f8;
+  font-family: 'Open Sans', sans-serif;
 }
 #wrapper {
   width: 100%;
@@ -15,6 +17,10 @@ body {
     padding: 0 30px;
     border-left: 1px solid #e7e7e7;
   }
+}
+.navbar {
+  background-color: #3c763d;
+  border-color: #3c763d;
 }
 .navbar-top-links {
   margin-right: 0;
@@ -144,7 +150,7 @@ body {
   border-bottom: 1px dotted #999999;
 }
 .chat li.left .chat-body {
-  margin-left: 60px;
+  /*margin-left: 60px;*/
 }
 .chat li.right .chat-body {
   margin-right: 60px;
@@ -425,5 +431,44 @@ table.dataTable thead .sorting:after {
     border-right-width: 14px;
     border-left-width: 0;
   }
+}
+.no-padding {
+  padding: 0;
+}
+.profile-line {
+  margin-bottom: 20px;
+}
+.profile-name {
+  font-size: 48px;
+}
+.no-border-radius {
+  border-radius: 0;
+}
+.progress {
+  border-radius: 0;
+}
+.progress-financing {
+  height: 50px;
+}
+.progress-bar div {
+  margin-top: 15px;
+  font-size: 18px;
+}
+.profile-main-info {
+  border-bottom: 1px solid #eee;
+  margin-bottom: 10px;
+}
+.profile-main-info div {
+  font-size: 24px;
+}
+.invest-box {
+  padding-top: 20px;
+}
+.invest-box button {
+  font-size: 36px;
+}
+#map {
+  height: 400px;
+  width: 100%;
 }
 /*# sourceMappingURL=sb-admin-2.css.map */
